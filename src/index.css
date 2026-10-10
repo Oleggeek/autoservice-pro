@@ -1,1 +1,44 @@
 @import "tailwindcss";
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  nav {
+    display: none !important;
+  }
+  
+  header {
+    display: none !important;
+  }
+  
+  .print-area {
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    overflow: visible !important;
+  }
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
